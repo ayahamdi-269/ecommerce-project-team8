@@ -11,6 +11,7 @@ function ProductPage() {
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
+  
 
   if (!product) return <p>...جاري التحميل</p>;
 
