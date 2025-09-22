@@ -15,6 +15,7 @@ function ProductPage() {
 
   if (!product) return <p>...جاري التحميل</p>;
 
+  
   return (
     <div>
       <h1>{product.name}</h1>
