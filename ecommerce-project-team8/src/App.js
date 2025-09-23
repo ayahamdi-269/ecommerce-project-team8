@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Navbar from "./components/Navbar"; // استدعاء الناف بار
 import ProductPage from "./pages/ProductPage";
-
 function App() {
   return (
     <Router>
+      <Navbar /> {/* الناف بار فوق */}
       <Routes>
-        {/* صفحة الرئيسية */}
         <Route path="/" element={<Home />} />
-        {/* صفحة تفاصيل المنتج */}
-        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/products" element={<ProductPage />} />
       </Routes>
     </Router>
   );

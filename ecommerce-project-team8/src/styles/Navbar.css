@@ -1,0 +1,18 @@
+
+.navbar-custom {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.navbar-custom .nav-link {
+  color: #4D3B3C;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #b76e79; 
+  cursor: pointer;
+}

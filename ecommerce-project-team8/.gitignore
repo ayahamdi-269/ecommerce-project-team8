@@ -41,10 +41,6 @@ build/Release
 node_modules/
 jspm_packages/
 
-/node_modules
-/.pnp
-.pnp.js
-
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
@@ -73,10 +69,6 @@ web_modules/
 .env
 .env.*
 !.env.example
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -104,7 +96,7 @@ dist
 # Sveltekit cache directory
 .svelte-kit/
 
-# Vitepress build output
+# vitepress build output
 **/.vitepress/dist
 # vitepress cache directory
 **/.vitepress/cache
@@ -142,6 +134,3 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-# Misc
-.DS_Store
