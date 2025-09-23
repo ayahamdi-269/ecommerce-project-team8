@@ -13,6 +13,8 @@ function ProductPage() {
       .then((data) => setProduct(data));
   }, [id]);
 
+  
+
   if (!product) {
     return <p className="loading-message">جاري تحميل المنتج...</p>;
   }
