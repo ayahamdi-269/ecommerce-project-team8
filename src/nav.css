@@ -2,134 +2,143 @@
 
 .navbar {
     font-family: 'Playfair Display', serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  position: relative;
-   background: linear-gradient(45deg, #ffffff, #ff9aebb9 ,#fc62ddaf,  #ff9aebb9, #ffffff);
-   background-size: 400% 400%;
-   -webkit-fill-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    position: relative;
+    height: 50px;
+    background: linear-gradient(45deg, #ffffff, #ff9aebb9 , #ffffff,  #ff9aebb9, #ffffff);
+    background-size: 400% 400%;
     animation: gradient-shift 9s ease-in-out infinite, glow-pulse 2s ease-in-out infinite;
     box-shadow: 0 0 30px rgba(255, 74, 225, 0.933);
-            transform: translateY(0);
-            transition: transform 0.8s ease;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes glow-pulse {
-            0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 0, 191, 0.3)); }
-            50% { filter: drop-shadow(0 0 40px rgba(255, 63, 242, 0.6)); }
-        }
-
-        @keyframes fade-in-up {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
-.navbar-logo a {
-  font-size: 22px;
-  font-weight: bold;
-  color: #e91e63; /* وردي مناسب لموقع ميك أب */
-  text-decoration: none;
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
+@keyframes glow-pulse {
+    0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 0, 191, 0.3)); }
+    50% { filter: drop-shadow(0 0 40px rgba(255, 63, 242, 0.6)); }
+}
+
+/* الجملة على الشمال */
+.navbar-text {
+    font-size: 22px;
+    font-weight: 500;
+    color: #e91e63;
+}
+
+.navbar-logo img{   
+   width: 120px;
+    border-radius: 50%;
+
+}
+/* اللوجو في النص */
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-logo a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+/* الروابط على اليمين */
 .navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .navbar-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-         .navbar-links a:hover {
-            color: #e91e63;
-            text-shadow: 0 0 10px #ffffff;
-        }
-
-        .navbar-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #ff00fb, #ea00ff);
-            transition: width 0.3s ease;
-        }
-
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff00fb, #ea00ff);
+    transition: width 0.3s ease;
+}
 
 .navbar-links a:hover {
-  color: #e91e63;
+    color: #e91e63;
+    text-shadow: 0 0 10px #ffffff;
 }
-   .navbar-links a:hover::after {
-            width: 100%;
-        }
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+/* أيقونة الكارت */
 .cart-link {
-  position: relative;
+    position: relative;
 }
 
 .cart-count {
-  position: absolute;
-  top: -8px;
-  right: -15px;
-  background: #e91e63;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 50%;
-}
-
-.profile-pic {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-/* hamburger button (hidden on desktop) */
-.navbar-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Responsive (mobile) */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
     position: absolute;
-    top: 60px;
-    right: 0;
-    background: #fff;
-    padding: 15px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
+    top: -8px;
+    right: -15px;
+    background: #e91e63;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
 
-  .navbar-links.active {
-    display: flex;
-  }
+/* صورة البروفايل */
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
 
-  .navbar-toggle {
-    display: block;
-  }
+/* hamburger button */
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
 }
