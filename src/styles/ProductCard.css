@@ -1,0 +1,63 @@
+body {
+  padding-top: 70px;
+}
+.product-card-wrapper {
+  overflow: visible;
+   display: inline-block;
+}
+
+.product-card {
+  background-color: #ffe6f0;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; 
+}
+.product-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.details-btn {
+  background: linear-gradient(45deg, #ffb6c1, #f8c6d5);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  background: linear-gradient(45deg, #f8c6d5, #ffb6c1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.save-btn {
+  border-radius: 50px !important;
+  padding: 8px 14px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff !important;
+  color: #ff4d6d !important;
+  border: 1px solid #ff4d6d !important;
+  transition: all 0.3s ease !important;
+}
+
+.save-btn:hover {
+  background-color: #ff4d6d !important;
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
