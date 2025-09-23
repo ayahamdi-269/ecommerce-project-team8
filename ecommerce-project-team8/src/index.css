@@ -1,0 +1,17 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+   background-color: #fff8f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #f8eef1 !important;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+}
